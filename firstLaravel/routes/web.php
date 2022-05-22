@@ -21,3 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 }
 );
+Route::get('newpage/{ad}/{soyad}', function ($ads, $soyads) {
+
+    return $ads."".$soyads;
+
+})-> where(['ad'=> '[a-z]+','soyad'=> '[azA-z]+']);
+
+
